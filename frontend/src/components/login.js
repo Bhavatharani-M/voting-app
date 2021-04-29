@@ -39,7 +39,7 @@ export class Login extends React.Component {
       };
 
       axios
-        .post("http://localhost:3003/user/login", data)
+        .post("https://voteapp-1.herokuapp.com/user/login", data)
         .then(function (response) {
           console.log(response);
           if (response.data.response === true) {

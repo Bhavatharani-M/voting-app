@@ -49,7 +49,7 @@ export class Candidate extends React.Component {
       };
 
       axios
-        .post("http://localhost:3003/vote/addCan", data)
+        .post("https://voteapp-1.herokuapp.com/vote/addCan", data)
         .then(function (response) {
             if(response){
                 alert(response.data.message);

@@ -6,6 +6,7 @@ import Success from './components/user/success';
 import {LoginAdmin} from './components/admin/login';
 import List from './components/admin/list';
 import {Candidate} from './components/admin/addcandidate';
+import Error from "./error";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path="/admin" exact component = {LoginAdmin} />
       <Route path="/list" exact component = {List} />
       <Route path="/addcan" exact component = {Candidate} />
+      <Route path="*" component={Error} />
     </Switch>
   </Router>
   );

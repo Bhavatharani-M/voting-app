@@ -6,7 +6,7 @@ const List = () => {
     const [vote, setVote] = useState([]);
 
     useEffect(() => {
-        Axios.get("http://localhost:3003/vote/can").then((res) => {
+        Axios.get("https://voteapp-1.herokuapp.com/vote/can").then((res) => {
             setVote(res.data);
         });
     }, []);

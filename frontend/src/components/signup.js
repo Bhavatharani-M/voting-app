@@ -57,7 +57,7 @@ export class Signup extends React.Component {
       console.log(data);
       console.log(this.state);
       axios
-        .post("http://localhost:3003/user/signup", data)
+        .post("https://voteapp-1.herokuapp.com/user/signup", data)
         .then(function (response) {
           alert(response.data.message);
           window.location.href = "/";

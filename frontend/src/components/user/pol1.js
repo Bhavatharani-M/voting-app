@@ -6,13 +6,13 @@ const Poll1 = () => {
     const [vote, setVote] = useState([]);
 
     useEffect(() => {
-        Axios.get("http://localhost:3003/vote/can").then((res) => {
+        Axios.get("https://voteapp-1.herokuapp.com/vote/can").then((res) => {
             setVote(res.data);
         });
     }, []);
 
     function voterf(id){
-        Axios.put(`http://localhost:3003/vote/addvote/${id}`).then((res) =>{
+        Axios.put(`https://voteapp-1.herokuapp.com/vote/addvote/${id}`).then((res) =>{
             console.log(res);
             if(res.status===200){
                 alert(res.data.message);
